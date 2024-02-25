@@ -40,6 +40,47 @@ int main(int argc, char **argv) {
         return MISSING_ARGUMENT;
     }
     }
+
+    bool flagi = false; 
+    bool flago = false;
+    bool flagc = false;
+    bool flagr = false;
+    bool flagp = false;
+
+    for (int i = 1; i < argc; i++) {
+        if (strcmp(argv[i], "-i") == 0) {
+            if (flagi) {
+                return DUPLICATE_ARGUMENT; 
+            }
+            flagi = true;
+        } 
+        else if (strcmp(argv[i], "-o") == 0) {
+            if (flago) {
+                return DUPLICATE_ARGUMENT; 
+            }
+            flago = true;
+        }
+         else if (strcmp(argv[i], "-c") == 0) {
+            if (flagc) {
+                return DUPLICATE_ARGUMENT; 
+            }
+            flagc = true;
+        } 
+        else if (strcmp(argv[i], "-r") == 0) {
+            if (flagr) {
+                return DUPLICATE_ARGUMENT; 
+            }
+            flagr = true;
+        } 
+        else if (strcmp(argv[i], "-p") == 0) {
+            if (flagp) {
+                return DUPLICATE_ARGUMENT; 
+            }
+            flagp = true;
+        }
+    
+    return 0;
+}
     
     (void)argc;
     (void)argv;
