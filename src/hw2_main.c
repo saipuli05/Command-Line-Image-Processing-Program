@@ -41,6 +41,7 @@ int main(int argc, char **argv) {
     }
     }
 
+  
     bool flagi = false; 
     bool flago = false;
     bool flagc = false;
